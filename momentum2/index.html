@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <form class="hidden" id="login-form"> <!--form 안에서 엔터 누르고 input 이 존재하지 않으면 자동으로 submit 됨/forma내에 input이 있어야함--> 
+    <form class="hidden"  id="login-form"> <!--form 안에서 엔터 누르고 input 이 존재하지 않으면 자동으로 submit 됨/forma내에 input이 있어야함--> 
         <input
         required                     
         maxlength="15"
@@ -21,8 +21,19 @@
     <h1 id="greeting" class="hidden"></h1>
     <!-- <a href="https://nomadcoders.co">Go to courses</a> -->
     <h2 id="clock">00:00:00</h2>
-    <script src="js/greetings.js"></script>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required/>
+    </form> 
+    <ul id="todo-list"></ul>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todolist.js"></script>
         
     
 </body>
