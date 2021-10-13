@@ -1,0 +1,117 @@
+<!-- Hello! This is my first HTML file!
+<h1>Nice to meet you!</h1>
+<h2>Nice to meet you!</h2>
+<h3>Nice to meet you!</h3>
+<h4>Nice to meet you!</h4> h1~h6 까지 있음-->
+
+<!-- <ul> unordered list -->
+    <!-- <li>beer</li>
+    <li>김치</li>
+    <li>meat</li>
+    <li>milk</li>
+</ul> -->
+
+<!-- <ol> ordered list -->
+    <!-- <li>beer</li>
+    <li>김치</li>
+    <li>meat</li>
+    <li>milk</li>
+    <li>milk
+</ol> --> 
+
+<!-- <a href="http://google.com" target="_blank">Go to google.com</a> anker에 부가적인 정보 필요:hyperlink reference(attribute)/anker 에만 사용-->
+<!-- <img src="https://commons.wikimedia.org/wiki/File:%E2%80%98LG_Q7_BTS_%EC%97%90%EB%94%94%EC%85%98%E2%80%99_%EC%98%88%EC%95%BD_%ED%8C%90%EB%A7%A4_%EC%8B%9C%EC%9E%91_(42773472410)_(cropped).jpg" /> <!--self-closing tag/text 아니라 이미지!/ -->
+<!-- src가 content/img 안에 src가 이미지를 넣음-->
+<!-- <img src="‘LG_Q7_BTS_에디션’_예약_판매_시작_(42773472410)_(cropped).jpg" /> 파일옆에 이미지가 있어야함/같은 파일 내 -->
+
+<!--우리 web site를 브라우저에게 정확하게 알려주기 위해/검색엔진에 잘 잡히기 위해-->
+<!DOCTYPE html> <!--html 규약(txt 파일아니라 html임)-->
+<html lang="kr">
+    <head> <!--페이지에 관한 환경 설정해주는 곳-->
+        <link
+            rel="shortcut icon"
+            href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico"
+        /><!-- sizes="16x16 32x32 64x64" -->
+        <!--type="image/x-icon" -->
+        <title>Home - My first website.</title>
+        <Link href="styles.css" rel="stylesheet" />
+        <style>
+            /* css code 작성 */
+            *{   /*모든요소*/
+            border: 2px solid black;  
+            }
+            html {
+            background-color: tomato;
+            }
+            div {
+            
+            height:150px;
+            width:150px;
+            background-color: whitesmoke;
+            border: 2px solid black;
+            }
+            span {
+                display:block;
+                background-color:turquoise;
+            }
+            body {
+                background-color: thistle;
+            }
+        </style>
+        <meta name="description" content="This is my website"/> <!--구글에서 찾는 태그-->
+        <meta charset="utf-8" /> <!-- 특수문자 읽을 수 있게함/self-closing 태크--> <!--태그에 맞는 attribute가 있다.-->
+
+    </head>
+    <body>
+        <!-- <form> -->
+            <!-- <label for="profile">Profile Photo</label> -->
+            <!-- <input id="profile" type="file" accept=".png,.pdf" /> for과 같은 id값의 input을 실행시킴 -->
+            <!-- <input type="file" accept=".png" /> image/* : 이미지파일모두 -->
+            <!-- <label for="first-name">First name</label>
+            <input id="first-name" required placeholder="Name" type="text" /> -->
+            <!-- <div> 양옆에 붙어있을 수 없음 -->
+                <!-- <div>
+                    <label for="website">Website</label>
+                    <input id="website" required placeholder="Name" type="url" /> type="email"/"range"/"date" // id는 어느 태그에나 하나만 넣음
+                </div>
+                <header>
+                     <h1>nico times</h1>  header와 div 기능 동일 // 검색엔진, 가독성을 위해 header로/sementic tag -->
+                <!-- </header>
+                <main>
+                    <p>hello!</p> >> 짧을 경우 <span>hello!</span>
+                </main>
+                <footer>
+                    &copy; 2020 N.C
+                </footer> -->
+            <!-- <input required placeholder="Last Name" disabled type="text" /> required값이 true or false 면 그대로 써도 무방 -->
+            <!-- <input required placeholder="Username" minlength="10" type="text" /> -->
+            <!-- <input required placeholder="Password" type="text" /> -->
+            <!-- <input type="submit" value="Create Account" /> button이름바꾸기 -->
+            
+        <!-- </form>
+      <h1>The Nico Times</h1> -->
+
+      <div></div>
+      
+      <span>hello</span>
+      <span>hello</span>
+      <span>hello</span>
+      <img src="img/logo.jpg" /><span>hello</span>
+      <span>hello</span>
+      <span>hello</span>
+      <a href="#">link</a>
+      
+
+    </body>
+
+</html>
+
+<!-- *태그 안에는 큰 따움표를 넣어야함 -->
+<!-- type은 form 의 input 에만 사용가능 -->
+
+<!-- <<css>> -->
+<!-- block이 아닌것 : span, a, image -->
+<!-- inline 은 높이와 너비가 없다 -->
+<!-- box의 속성 : 1. margin , 2. border, 3. padding -->
+  <!-- ㄴ margin : box 의 border 의 바깥 공간
+  ㄴcollapsing margins 현상 : 위아래 두 박스의 경계가 같으면 마진이 하나가 됨 -->
