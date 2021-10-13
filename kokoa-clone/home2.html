@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Link href="styles.css" rel="stylesheet" />
+</head>
+<style>
+    /* body{
+        margin: 20px;
+    }
+    span {
+        background-color: teal; */
+        /**padding: 20px;
+        margin: 30px; /**inline 일 경우 상,하에는 margin 안먹힘>>block으로 바꿔야함**/
+    /* } */
+
+    /* #tomato{
+        background-color: tomato;
+    }
+
+    #tomato2{
+        background-color: tomato;
+    }
+
+    #tomato3{
+        background-color: tomato;
+    } */
+
+    /* #tomato,
+    #tomato2,
+    #tomato3 */
+    /* .btn {
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .tomato {
+        background-color: tomato;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+   #tomato {
+       background-color: yellow;
+   }
+
+   .teal{
+       background-color: blue;
+   } */
+   div {
+       display:inline-block;  /*inline인데 width, height 지정하고 싶을 때 >>설정하지 않은 빈공간 있음*/
+       width: 50px;
+       height: 50px;
+       background-color: teal;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       /* ㄴ 숫자 배열 */
+       flex-wrap: wrap;
+       /* 크기 width 고정 */
+        }
+    body{
+        height: 100vh;
+        /* viewport(screen) height/ 화면 높이의 100% */
+        margin:20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center; 
+        flex-direction: column-reverse ;
+        /* 주축설정 */
+        }
+        /* main-aixs<>수평이 아니라(바꿀 수 있음)/cross axis */
+    /* flex box는 부모요소에서 명시 : div의 부모를 display:flex로 만든다 */
+</style>
+
+<body>
+    <!-- <span class="btn teal">hello</span> -->
+    <!-- <span class="btn tomato">hello</span> id가 중복되서 좋지 않음>>class> -->
+    <!-- <span class="btn">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn teal">hello</span>
+    <span>hello</span> -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <!-- 숫자를 가진 div는 flex container가될수 있다. -->
+</body>
+</html>

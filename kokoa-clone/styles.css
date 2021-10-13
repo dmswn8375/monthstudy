@@ -1,0 +1,19 @@
+/* html 태그를 가리키는 일 : 이게 초록색이다.
+가리키는거 : selector */
+
+blueTitle(selector) {
+}
+
+h1 {
+  property: value;
+}
+
+h1 {
+  color: blue;
+  font-size: 20px; /*띄어쓰기 안함 */
+  font-style: italic;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* css : 코드 순서가 영향을 줌 cascade */
