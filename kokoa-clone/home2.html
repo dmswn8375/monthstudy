@@ -49,29 +49,74 @@
        background-color: blue;
    } */
    div {
-       display:inline-block;  /*inline인데 width, height 지정하고 싶을 때 >>설정하지 않은 빈공간 있음*/
-       width: 50px;
-       height: 50px;
-       background-color: teal;
-       display: flex;
+       /* position: fixed; */
+       /* 박스위치고정 */
+       /* display:inline-block;  inline인데 width, height 지정하고 싶을 때 >>설정하지 않은 빈공간 있음 */
+       width: 150px;
+       height: 150px;
+       background-color: wheat;
+       /* display: flex;
        justify-content: center;
-       align-items: center;
+       align-items: center; */
        /* ㄴ 숫자 배열 */
-       flex-wrap: wrap;
+       /* flex-wrap: wrap; */
        /* 크기 width 고정 */
+       /* position:relative; */
+       /* 부모자식관계에서 >>relative 없으면 부모를 기준으로*/
         }
+        div:first-child{
+            background-color: tomato;
+        }
+        div:last-child{
+            background-color: teal;
+        }
+   /***** .green {
+        background-color: teal;
+        height:100px;
+        width: 100px;
+        position: absolute;
+        right: 0px;
+        bottom:0px; 
+        
+    }***/
+    /* div{
+        background-color: wheat;
+        width: 350px;
+        height:300px;
+        position: relative; */
+        /* position: fixed;
+        top: 12px; */
+        /* fix 상태에서 top,left, right 하나만 수정해도 레이어 두개로 초록박스 무시함 /위로감*/
+        /*element가 처음 놓인 자리에서 상하좌우로 움직임*/
+    /*}
+
     body{
-        height: 100vh;
+        height: 1000vh;
         /* viewport(screen) height/ 화면 높이의 100% */
-        margin:20px;
-        display:flex;
+        /* margin:20px; */
+        /* display:flex;
         justify-content: space-between;
         align-items: center; 
         flex-direction: column-reverse ;
         /* 주축설정 */
-        }
+        /* flex-wrap: wrap-reverse; */
+        /* 1번부터 내려감 */
+        /* flex-direction: row-reverse; */ 
+       
+        /* } */
         /* main-aixs<>수평이 아니라(바꿀 수 있음)/cross axis */
     /* flex box는 부모요소에서 명시 : div의 부모를 display:flex로 만든다 */
+    span{
+        background-color: tomato;
+    }
+    /* span:nth-child(2),
+    span:nth-child(4){
+        background-color: teal;
+    } */
+    span:nth-child(even) {
+        background-color: teal;
+    }
+    /* even: 짝수, odd: 홀수 * 2n, 2n+1, 3n+1*/
 </style>
 
 <body>
@@ -82,9 +127,198 @@
     <span class="btn teal">hello</span>
     <span class="btn teal">hello</span>
     <span>hello</span> -->
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
+    
+    
+    <!-- <div>
+        <div class="green"></div>
+    </div> -->
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <div></div> -->
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    
+    
     <!-- 숫자를 가진 div는 flex container가될수 있다. -->
 </body>
 </html>
+
+<<3.15>>id , class 쓰지않고 css 에 불러오기
+    p span{
+        
+    }
+    부모자식
+
+    text-decoration:underline;
+
+    div > span {
+        text-decoration: underline;
+    }
+    //부모바로 밑자식 고르고 싶을 떄
+
+    p + span {
+        text-decoration: underline;
+    }
+    //p 바로 다음으로 span 이 올경우 형제관계<>부모자식관계
+    p ~ span {
+        text-decoration: underline;
+    }
+    //사이에 머가 있을때
+
+
+
+    <<state>>
+    <form>
+        <input ~ placeholder="username"/>
+        <input type~ requried placeholder="password"/>
+    </form>
+    >>input:required{
+        border:1px solid tomato;
+    }
+    >>input:optional{
+        <>required 없는 input 에 사용
+    }
+    >>input[type="password"] {
+        background-color:thistle;
+    }
+    >>input[placeholder~="name"] {
+        background-color: pink;
+    }
+    //name을 포함하고 있는 placeholder일 경우 선택/~:포함하고 있다.
+
+    <button>Hello</button>
+    button:active{
+        background-color:tomato; >>색 변했다가 돌아옴
+    }
+    hover: 마우스 올려놨을 때
+    focus: 한번클릭하면 색으로 focusing 됨
+    focus-within : focused 인 자식을 가진 부모 엘리먼트의 상태
+    ㄴ form:focus-within{
+        border-color:seagreen;
+    }
+
+    <a href="http://apple.com"></a>
+
+    a:visited{
+        color:tomato;
+    }
+    //링크 클릭했는지 알수 있음/ html 에 아무것도 안적어도 링크면 (<a href=""></a>)
+
+    form:hover input {
+        background-color: sienna;
+    }
+    form 이 hover 일때 자식 input의 색깔이 바뀜
+
+    form:hover input:focus {
+        background-color: sienna;
+    }
+
+
+    input::placeholder{
+        color:yellowgreen;
+    }
+    //검색창 내 색변경
+
+    p::selection/first-letter/first-line?{
+        background-color: 
+    }
+    //선택시에 색변경
+
+
+    p{
+        background-color: rgba(252, 206, 0, 1);
+    }
+    마지막 : 불투명도 1=100%
+
+
+<custom property> 사용자지정 css 속성
+    :root {
+        --main-color: #fcce00
+        --default-border:1px solid var(--main-color);
+    }
+
+    a {
+        color: var(--main-color);
+        border: var(--default-border);
+    }
+    //끌어와서 사용가능
+
+    <<4.ADVANCED CSS>>-css animation
+        4.0 Transitions
+        ㄴstate가 없는 것에서 써야함>>root
+        transition: background-color 10s ease-in-out, color 5s ease-in-out;(글자도 천천히)
+        ㄴ hover 걸린데 말고 a에 작성
+        transition: all 5s ease-in-out;
+        (ㄴ변화된 모든것을 변화시키겠다.)
+        
+        transition: all is linear;
+        transition: background-color is cubic-bezier(0.6, 0, 0.735, 0.045),
+            border-radius 5s ease-in-out; (추가)
+        ㄴ 배경에만 색 변하고 싶을때
+
+       4.2 Transformations
+       border: 10px solid black;
+       border-radius: 50%; >> 원
+       transform: rotateY(90deg) rotateX(45deg) rotateZ(10deg);
+       transform: scaleY(12);
+       ㄴ y축으로 회전
+       transform: scale(2, 2);
+       transform: translateX(300px);
+       ㄴ x축으로 300이동
+       ㄴ 다른 요소의 box를 변형시키지않고 원하는 요소를 이동시키기 위해 사용
+       ㄴ 페이지의 픽셀의 다른 부분에서 일어남???
+
+       transition: transform 5s ease-in-out;
+       scale(0.5)
+       ㄴ 크기 줄었다가 늠
+
+       내 애니메이션 만들기
+       <style>
+       @keyframes superSexyCoinFlip {
+           from {
+               transform: rotateX(0);
+           }
+           to {
+               transform: rotateX(360deg);
+           }
+        
+            마지막{
+                transform: rotateY(0) translateY(0px);
+            }
+        }
+//step 계속 늘릴수 있음
+       img{
+           animation: superSexyCoinFlip 5s ease-in-out infinite;
+       }
+
+       4.5 Media Queries
+
+       <style>
+        @media screen and (max-width:400px) and (min-width:300px) and (orientation : landscape){
+            div{
+                background-color: tomato;
+            }
+        }
+        </style>
+        // @~ 일경우 밑에껄 실행시켜라
+
+        //핸드폰 가로, 세로
+        (orientation : landscape) 가로일때만 적용
+        (orientation : portrait)
+        min-device-width : 모바일에만 사용가능
+
+
+        span{
+            display: none;
+        }
+        //아무것도 보여주지 않자
+
+        @media print{
+            div{
+                background-color: tomato;
+            }
+        }
