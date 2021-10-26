@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="logText">click me</button>
+        <!-- methods 속성과 v-on 디렉티브를 이용한 키보드, 마우스 이벤트 처리방법 -->
+        <input type="text" v-on:keyup.enter="logText">
+        <!-- keyup=입력.(해당이벤트의 모디파이어) -->
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            methods:{
+                logText:function(){
+                    console.log('clicked');
+                }
+            }
+        })
+    </script>
+</body>
+</html>
