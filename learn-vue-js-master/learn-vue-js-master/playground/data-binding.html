@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p v-bind:id ="uuid" v-bind:class="name">{{ num }}</p>   
+        <!-- (1. 뷰 디렉티브)v-bind는 id 가 Vue 내부의 특정값과 연결되게함 -->
+        <!-- 연결되는 구간(databindig) = 콧수염괄호 -->
+        <p>{{ doubleNum }}</p>
+        <div v-if="loading"> 
+            <!-- vue 디렉티브 2. v-if/v-else : 특정태그의 내용을 보여주느냐 아니야에 따라 -->
+            Loading..
+        </div>
+        <div v-else>
+            test user has been logged in
+        </div>
+        <div v-show="loading">
+            <!-- 3육안상으로만 안보이고 none 처리 (dom에 저장되어있다.)<>if 와 다른점 -->
+          Loading...  
+        </div>
+        <!-- TODO: 인풋 박스를 만들고 입력된 값을 p 태그에 출력해보세요 --> 
+        <input type="text" v-model="message">
+        <!--4 message를 v-model로 연결/동기화 -->
+        <p>{{ message }}</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+               num : 10,
+               uuid: 'abc1234',
+               name: 'text-blue',
+               loading:true,
+               message: ' '
+            },
+            computed: {
+                //computed 속성
+                doubleNum: function() {
+                    return this.num*2;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

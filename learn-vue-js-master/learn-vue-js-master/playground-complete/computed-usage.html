@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .warning {
+    color: red;
+  }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p v-bind:class="errorTextColor">Hello</p>
+    <!-- { warning: isError } -->
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        // cname: 'blue-text',
+        isError: false
+      },
+      computed: {
+        errorTextColor: function() {
+          // if (isError) {
+          //   return 'warning'
+          // } else {
+          //   return null;
+          // }
+          return this.isError ? 'warning' : null;
+          //ture 면 warning 아니면: null
+        }
+      }
+    });
+
+    const str = 'world';
+    const num = 1;
+    
+    const obj = {
+      hello: 'world',
+      good: 123,
+      bye: function() {
+        console.log(123123)
+      }
+    };
+
+    const arr = [
+      {id: 1, name: 'kim', age: 28},
+      {id: 2, name: 'sim', age: 26},
+      1,
+      'hello'
+    ];
+
+    for (let i = 0; i < arr.length; i++) {
+      console.log(i, arr[i]);
+    }
+
+  </script>
+</body>
+</html>
